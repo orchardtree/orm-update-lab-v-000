@@ -42,7 +42,7 @@ class Student
       @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students")[0][0]
     end
   end
-=begin
+
   def update 
     sql = <<-SQL 
       UPDATE students
@@ -51,7 +51,7 @@ class Student
     SQL
     DB[:conn].execute(sql, self.name, self.grade, self.id)
   end
-=end
+
   def self.create(name, grade)
     new_student = self.new(name, grade)
     sql = <<-SQL
