@@ -23,3 +23,27 @@ class Student
     DB[:conn].execute(sql)
   end
 end
+
+def self.drop
+  sql = <<-SQL
+    DROP TABLE IF EXISTS students;
+  SQL
+  DB[:conn].execute(sql)
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
